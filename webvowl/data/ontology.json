@@ -1,0 +1,659 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1", "https://w3id.org/hsv" ],
+    "title" : {
+      "en" : "Historic Survey Ontology (HSV)"
+    },
+    "iri" : "https://w3id.org/hsv",
+    "version" : "1.0.0",
+    "author" : [ "_:genid2147483668", "_:genid2147483667", "_:genid2147483666", "_:genid2147483665", "_:genid2147483669", "_:genid2147483671", "_:genid2147483670", "_:genid2147483664" ],
+    "description" : {
+      "en" : "The Historic Survey Ontology (HSV) organises the knowledge involved in historic survey activities by explicitly modelling both the information sources and actors directly or indirectly involved in the survey."
+    },
+    "other" : {
+      "isReferencedBy" : [ {
+        "identifier" : "isReferencedBy",
+        "language" : "undefined",
+        "value" : "https://doi.org/10.19282/acs.13.2025.16",
+        "type" : "iri"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483670",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483664",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483665",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483671",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483666",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483669",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483667",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483668",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "hsv",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/hsv#",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Historic Survey Ontology (HSV)",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "8",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/hsv#Photo",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Photo",
+      "en" : "Photo"
+    },
+    "comment" : {
+      "en" : "A photographic record of a heritage asset or its components acquired during survey activities."
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "3", "4", "5", "6", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "2"
+  }, {
+    "instances" : 0,
+    "union" : [ "5", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/hsv#StructuralUnit",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuralUnit",
+      "en" : "Structural Unit"
+    },
+    "comment" : {
+      "en" : "A building-scale structural entity representing an individual unit within an aggregate."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/hsv#Drawing",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Drawing",
+      "en" : "Drawing"
+    },
+    "comment" : {
+      "en" : "A graphical representation such as a plan, section, or elevation produced during a survey."
+    },
+    "id" : "9",
+    "superClasses" : [ "1" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "5", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/hsv#Aggregate",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Aggregate",
+      "en" : "Aggregate"
+    },
+    "comment" : {
+      "en" : "A building aggregate typical of historic urban fabrics, composed of one or more structural units."
+    },
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/hsv#BuildingInformationModel",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BuildingInformationModel",
+      "en" : "Building Information Model"
+    },
+    "comment" : {
+      "en" : "A digital model representing the physical and functional characteristics of a heritage asset (BIM)."
+    },
+    "id" : "12",
+    "superClasses" : [ "1" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "5", "6", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "25"
+  }, {
+    "instances" : 0,
+    "union" : [ "4", "5", "6" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/hsv#HistoricCentre",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HistoricCentre",
+      "en" : "Historic Centre"
+    },
+    "comment" : {
+      "en" : "A historic urban centre, typically nested within a region, that may contain one or more building aggregates."
+    },
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/hsv#Author",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Author",
+      "en" : "Author"
+    },
+    "comment" : {
+      "en" : "A person who authored a document or publication related to the survey."
+    },
+    "id" : "31",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "https://w3id.org/hsv#SeismicZone",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeismicZone",
+      "en" : "Seismic Zone"
+    },
+    "comment" : {
+      "en" : "A zone characterised by a specific seismic hazard level, associated with a region or historic centre."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/hsv#Region",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Region",
+      "en" : "Region"
+    },
+    "comment" : {
+      "en" : "A geographic or administrative region that may contain one or more historic centres."
+    },
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/hsv#Inspector",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Inspector",
+      "en" : "Inspector"
+    },
+    "comment" : {
+      "en" : "A person responsible for acquiring survey data in the field."
+    },
+    "id" : "29",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "https://w3id.org/hsv#PointCloud",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointCloud",
+      "en" : "Point Cloud"
+    },
+    "comment" : {
+      "en" : "A set of data points in 3D space acquired through laser scanning or photogrammetry."
+    },
+    "id" : "15",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/hsv#PostProcesser",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PostProcesser",
+      "en" : "Post-Processer"
+    },
+    "comment" : {
+      "en" : "A person responsible for the post-processing of raw survey data into usable outputs."
+    },
+    "id" : "22",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "https://w3id.org/hsv#Facade",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Facade",
+      "en" : "Facade"
+    },
+    "comment" : {
+      "en" : "The exterior face of a structural unit or building, treated as a distinct survey entity."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/hsv#Document",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Document",
+      "en" : "Document"
+    },
+    "subClasses" : [ "12", "0", "15", "9", "18" ],
+    "comment" : {
+      "en" : "A central class representing any survey output or information source associated with a heritage asset or its components."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/hsv#TraditionalConstructionTechnique",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TraditionalConstructionTechnique",
+      "en" : "Traditional Construction Technique"
+    },
+    "comment" : {
+      "en" : "A construction technique or masonry system historically used in a region or historic centre."
+    },
+    "id" : "34"
+  }, {
+    "iri" : "https://w3id.org/hsv#Publication",
+    "baseIri" : "https://w3id.org/hsv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Publication",
+      "en" : "Publication"
+    },
+    "comment" : {
+      "en" : "A scholarly or technical text documenting survey findings, research, or heritage knowledge."
+    },
+    "id" : "18",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "subClasses" : [ "31", "29", "22" ],
+    "attributes" : [ "external" ],
+    "id" : "32"
+  } ],
+  "property" : [ {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "1",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "11"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "range" : "1",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "range" : "1",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "range" : "1",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/hsv#hasSeismicZone",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasSeismicZone",
+      "en" : "has seismic zone"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Associates a region or historic centre with its seismic zone classification."
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/hsv#hasPostProcesser",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasPostProcesser",
+      "en" : "has post-processer"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Associates a survey resource with the post-processer responsible for its elaboration."
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/hsv#hasDocument",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasDocument",
+      "en" : "has document"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Links a spatial, structural, or material entity to a document that provides evidence for its characterisation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/hsv#postProcessedBy",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "postProcessedBy",
+      "en" : "post-processed by"
+    },
+    "domain" : "1",
+    "subproperty" : [ "21" ],
+    "comment" : {
+      "en" : "Links a survey resource to the person who post-processed it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/hsv#contains",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "contains",
+      "en" : "contains"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "A generic spatial containment property linking a larger spatial entity to a smaller one nested within it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/hsv#acquiredBy",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "acquiredBy",
+      "en" : "acquired by"
+    },
+    "domain" : "1",
+    "subproperty" : [ "30" ],
+    "comment" : {
+      "en" : "Links a survey resource to the inspector who acquired it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/hsv#hasTraditionalConstructionTechnique",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasTraditionalConstructionTechnique",
+      "en" : "has traditional construction technique"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Associates a region or historic centre with a traditional construction technique typical of that context."
+    },
+    "attributes" : [ "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/hsv#hasInspector",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hasInspector",
+      "en" : "has inspector"
+    },
+    "superproperty" : [ "28" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Associates a survey resource with the inspector responsible for its field acquisition."
+    },
+    "attributes" : [ "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/hsv#hasAuthor",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasAuthor",
+      "en" : "has author"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links a document or publication to its author."
+    },
+    "attributes" : [ "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/hsv#isContainedBy",
+    "inverse" : "27",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "isContainedBy",
+      "en" : "is contained by"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Inverse of hsv:contains."
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/hsv#isDocumentOf",
+    "inverse" : "24",
+    "baseIri" : "https://w3id.org/hsv",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isDocumentOf",
+      "en" : "is document of"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Inverse of hsv:hasDocument."
+    },
+    "attributes" : [ "object" ],
+    "id" : "37"
+  }, {
+    "range" : "32",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "32",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "32",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  } ]
+}

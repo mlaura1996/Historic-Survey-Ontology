@@ -1,0 +1,506 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/hsv#"
+     xml:base="https://w3id.org/hsv"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/hsv">
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:creator rdf:nodeID="genid2"/>
+        <terms:creator rdf:nodeID="genid3"/>
+        <terms:creator rdf:nodeID="genid4"/>
+        <terms:creator rdf:nodeID="genid5"/>
+        <terms:creator rdf:nodeID="genid6"/>
+        <terms:creator rdf:nodeID="genid7"/>
+        <terms:creator rdf:nodeID="genid8"/>
+        <terms:description xml:lang="en">The Historic Survey Ontology (HSV) organises the knowledge involved in historic survey activities by explicitly modelling both the information sources and actors directly or indirectly involved in the survey.</terms:description>
+        <terms:isReferencedBy rdf:resource="https://doi.org/10.19282/acs.13.2025.16"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="en">Historic Survey Ontology (HSV)</terms:title>
+        <vann:preferredNamespacePrefix>hsv</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/hsv#</vann:preferredNamespaceUri>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Maria Laura Leonardi</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Stefano Cursi</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Letizia Martinelli</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Elena Gigliarelli</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid5">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Filippo Calcerano</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Miguel Azenha</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid7">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Daniel V. Oliveira</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid8">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Michele Calvano</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isReferencedBy -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isReferencedBy"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/hsv#acquiredBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#acquiredBy">
+        <rdfs:domain rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:range rdf:resource="https://w3id.org/hsv#Inspector"/>
+        <rdfs:comment xml:lang="en">Links a survey resource to the inspector who acquired it.</rdfs:comment>
+        <rdfs:label xml:lang="en">acquired by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hsv#contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#contains">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/hsv#Aggregate"/>
+                    <rdf:Description rdf:about="https://w3id.org/hsv#HistoricCentre"/>
+                    <rdf:Description rdf:about="https://w3id.org/hsv#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/hsv#Aggregate"/>
+                    <rdf:Description rdf:about="https://w3id.org/hsv#HistoricCentre"/>
+                    <rdf:Description rdf:about="https://w3id.org/hsv#StructuralUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">A generic spatial containment property linking a larger spatial entity to a smaller one nested within it.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hsv#hasAuthor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#hasAuthor">
+        <rdfs:domain rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:range rdf:resource="https://w3id.org/hsv#Author"/>
+        <rdfs:comment xml:lang="en">Links a document or publication to its author.</rdfs:comment>
+        <rdfs:label xml:lang="en">has author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hsv#hasDocument -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#hasDocument">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/hsv#Aggregate"/>
+                    <rdf:Description rdf:about="https://w3id.org/hsv#Facade"/>
+                    <rdf:Description rdf:about="https://w3id.org/hsv#HistoricCentre"/>
+                    <rdf:Description rdf:about="https://w3id.org/hsv#Region"/>
+                    <rdf:Description rdf:about="https://w3id.org/hsv#StructuralUnit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:comment xml:lang="en">Links a spatial, structural, or material entity to a document that provides evidence for its characterisation.</rdfs:comment>
+        <rdfs:label xml:lang="en">has document</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hsv#hasInspector -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#hasInspector">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/hsv#acquiredBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:range rdf:resource="https://w3id.org/hsv#Inspector"/>
+        <rdfs:comment xml:lang="en">Associates a survey resource with the inspector responsible for its field acquisition.</rdfs:comment>
+        <rdfs:label xml:lang="en">has inspector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hsv#hasPostProcesser -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#hasPostProcesser">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/hsv#postProcessedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:range rdf:resource="https://w3id.org/hsv#PostProcesser"/>
+        <rdfs:comment xml:lang="en">Associates a survey resource with the post-processer responsible for its elaboration.</rdfs:comment>
+        <rdfs:label xml:lang="en">has post-processer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hsv#hasSeismicZone -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#hasSeismicZone">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/hsv#HistoricCentre"/>
+                    <rdf:Description rdf:about="https://w3id.org/hsv#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/hsv#SeismicZone"/>
+        <rdfs:comment xml:lang="en">Associates a region or historic centre with its seismic zone classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">has seismic zone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hsv#hasTraditionalConstructionTechnique -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#hasTraditionalConstructionTechnique">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/hsv#HistoricCentre"/>
+                    <rdf:Description rdf:about="https://w3id.org/hsv#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/hsv#TraditionalConstructionTechnique"/>
+        <rdfs:comment xml:lang="en">Associates a region or historic centre with a traditional construction technique typical of that context.</rdfs:comment>
+        <rdfs:label xml:lang="en">has traditional construction technique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hsv#isContainedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#isContainedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/hsv#contains"/>
+        <rdfs:comment xml:lang="en">Inverse of hsv:contains.</rdfs:comment>
+        <rdfs:label xml:lang="en">is contained by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hsv#isDocumentOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#isDocumentOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/hsv#hasDocument"/>
+        <rdfs:comment xml:lang="en">Inverse of hsv:hasDocument.</rdfs:comment>
+        <rdfs:label xml:lang="en">is document of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hsv#postProcessedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hsv#postProcessedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:range rdf:resource="https://w3id.org/hsv#PostProcesser"/>
+        <rdfs:comment xml:lang="en">Links a survey resource to the person who post-processed it.</rdfs:comment>
+        <rdfs:label xml:lang="en">post-processed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://w3id.org/hsv#Aggregate -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#Aggregate">
+        <rdfs:comment xml:lang="en">A building aggregate typical of historic urban fabrics, composed of one or more structural units.</rdfs:comment>
+        <rdfs:label xml:lang="en">Aggregate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#Author -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#Author">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">A person who authored a document or publication related to the survey.</rdfs:comment>
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#BuildingInformationModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#BuildingInformationModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:comment xml:lang="en">A digital model representing the physical and functional characteristics of a heritage asset (BIM).</rdfs:comment>
+        <rdfs:label xml:lang="en">Building Information Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#Document -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#Document">
+        <rdfs:comment xml:lang="en">A central class representing any survey output or information source associated with a heritage asset or its components.</rdfs:comment>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#Drawing -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#Drawing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:comment xml:lang="en">A graphical representation such as a plan, section, or elevation produced during a survey.</rdfs:comment>
+        <rdfs:label xml:lang="en">Drawing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#Facade -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#Facade">
+        <rdfs:comment xml:lang="en">The exterior face of a structural unit or building, treated as a distinct survey entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Facade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#HistoricCentre -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#HistoricCentre">
+        <rdfs:comment xml:lang="en">A historic urban centre, typically nested within a region, that may contain one or more building aggregates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Historic Centre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#Inspector -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#Inspector">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">A person responsible for acquiring survey data in the field.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inspector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#Photo -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#Photo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:comment xml:lang="en">A photographic record of a heritage asset or its components acquired during survey activities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Photo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#PointCloud -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#PointCloud">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:comment xml:lang="en">A set of data points in 3D space acquired through laser scanning or photogrammetry.</rdfs:comment>
+        <rdfs:label xml:lang="en">Point Cloud</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#PostProcesser -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#PostProcesser">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">A person responsible for the post-processing of raw survey data into usable outputs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Post-Processer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#Publication -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#Publication">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/hsv#Document"/>
+        <rdfs:comment xml:lang="en">A scholarly or technical text documenting survey findings, research, or heritage knowledge.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#Region -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#Region">
+        <rdfs:comment xml:lang="en">A geographic or administrative region that may contain one or more historic centres.</rdfs:comment>
+        <rdfs:label xml:lang="en">Region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#SeismicZone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#SeismicZone">
+        <rdfs:comment xml:lang="en">A zone characterised by a specific seismic hazard level, associated with a region or historic centre.</rdfs:comment>
+        <rdfs:label xml:lang="en">Seismic Zone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#StructuralUnit -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#StructuralUnit">
+        <rdfs:comment xml:lang="en">A building-scale structural entity representing an individual unit within an aggregate.</rdfs:comment>
+        <rdfs:label xml:lang="en">Structural Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hsv#TraditionalConstructionTechnique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hsv#TraditionalConstructionTechnique">
+        <rdfs:comment xml:lang="en">A construction technique or masonry system historically used in a region or historic centre.</rdfs:comment>
+        <rdfs:label xml:lang="en">Traditional Construction Technique</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Historic Survey Ontology (HSV)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/hsv#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/hsv#","name":"Historic Survey Ontology (HSV)", "headline":"Document describing the ontology https://w3id.org/hsv#", "dateReleased":"Wed May 20 10:30:18 BST 2026", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Maria Laura Leonardi"},{"@type":"Person","name":"Stefano Cursi"},{"@type":"Person","name":"Letizia Martinelli"},{"@type":"Person","name":"Elena Gigliarelli"},{"@type":"Person","name":"Filippo Calcerano"},{"@type":"Person","name":"Miguel Azenha"},{"@type":"Person","name":"Daniel V. Oliveira"},{"@type":"Person","name":"Michele Calvano"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Historic Survey Ontology (HSV)</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/hsv#">https://w3id.org/hsv#</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Authors:</dt>
+<dd>Maria Laura Leonardi</dd><dd>Stefano Cursi</dd><dd>Letizia Martinelli</dd><dd>Elena Gigliarelli</dd><dd>Filippo Calcerano</dd><dd>Miguel Azenha</dd><dd>Daniel V. Oliveira</dd><dd>Michele Calvano</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Maria Laura Leonardi, Stefano Cursi, Letizia Martinelli, Elena Gigliarelli, Filippo Calcerano, Miguel Azenha, Daniel V. Oliveira, Michele Calvano. Historic Survey Ontology (HSV). Revision: 1.0.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract">The Historic Survey Ontology (HSV) provides a formal knowledge representation for the activities, outputs, and actors involved in the survey of historic buildings and urban heritage. The ontology models the heterogeneous sources produced during survey campaigns — including point clouds, drawings, photographs, publications, and Building Information Models — and links them explicitly to the spatial and structural entities they document, from geographic regions down to individual structural units and facades. HSV also captures the human roles involved in survey workflows (inspectors, post-processers, and authors) and formalises contextual knowledge about traditional construction techniques and seismic zonation associated with historic contexts. By making provenance, spatial organisation, and construction culture explicit and machine-readable, HSV supports interoperability across heritage documentation practices and facilitates integration with external domain ontologies.
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction">The documentation and systematic knowledge of historic buildings requires the integration of heterogeneous data sources, diverse professional roles, and multi-scale spatial information. Survey campaigns of heritage assets typically produce a wide range of outputs — from raw three-dimensional measurement data to scholarly publications — yet the relationships between these outputs, the entities they describe, and the people responsible for them are rarely formalised in a structured and reusable way.
+
+The Historic Survey Ontology (HSV) addresses this gap by providing a shared conceptual framework for representing survey knowledge in the domain of built heritage. The ontology is organised around two main axes. The first concerns the spatial and structural organisation of heritage contexts: HSV introduces a hierarchy of classes — Region, Historic Centre, Aggregate, Structural Unit, and Facade — that reflects the nested scales at which historic buildings and urban fabrics are typically documented. The second concerns the survey outputs themselves: HSV models documents as a central node linking heterogeneous resources (point clouds, drawings, photos, publications, and BIM models) to the entities they characterise and to the actors involved in their production.
+
+HSV also captures broader contextual knowledge relevant to heritage interpretation, including traditional construction techniques and seismic zonation, which can be associated with regions or historic centres to enrich the description of the surveyed asset.
+
+The ontology reuses the FOAF vocabulary for the representation of persons and their roles, and is designed to align with and complement other domain ontologies used in the heritage and built environment communities. HSV is published at https://w3id.org/hsv and is available in Turtle serialisation under a Creative Commons Attribution 4.0 licence.
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Historic Survey Ontology (HSV): Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Aggregate" title="https://w3id.org/hsv#Aggregate">Aggregate</a>
+   </li>
+   <li>
+      <a href="#Author" title="https://w3id.org/hsv#Author">Author</a>
+   </li>
+   <li>
+      <a href="#BuildingInformationModel" title="https://w3id.org/hsv#BuildingInformationModel">Building Information Model</a>
+   </li>
+   <li>
+      <a href="#Document" title="https://w3id.org/hsv#Document">Document</a>
+   </li>
+   <li>
+      <a href="#Drawing" title="https://w3id.org/hsv#Drawing">Drawing</a>
+   </li>
+   <li>
+      <a href="#Facade" title="https://w3id.org/hsv#Facade">Facade</a>
+   </li>
+   <li>
+      <a href="#HistoricCentre" title="https://w3id.org/hsv#HistoricCentre">Historic Centre</a>
+   </li>
+   <li>
+      <a href="#Inspector" title="https://w3id.org/hsv#Inspector">Inspector</a>
+   </li>
+   <li>
+      <a href="#Photo" title="https://w3id.org/hsv#Photo">Photo</a>
+   </li>
+   <li>
+      <a href="#PointCloud" title="https://w3id.org/hsv#PointCloud">Point Cloud</a>
+   </li>
+   <li>
+      <a href="#PostProcesser" title="https://w3id.org/hsv#PostProcesser">Post-Processer</a>
+   </li>
+   <li>
+      <a href="#Publication" title="https://w3id.org/hsv#Publication">Publication</a>
+   </li>
+   <li>
+      <a href="#Region" title="https://w3id.org/hsv#Region">Region</a>
+   </li>
+   <li>
+      <a href="#SeismicZone" title="https://w3id.org/hsv#SeismicZone">Seismic Zone</a>
+   </li>
+   <li>
+      <a href="#StructuralUnit" title="https://w3id.org/hsv#StructuralUnit">Structural Unit</a>
+   </li>
+   <li>
+      <a href="#TraditionalConstructionTechnique"
+         title="https://w3id.org/hsv#TraditionalConstructionTechnique">Traditional Construction Technique</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#acquiredBy" title="https://w3id.org/hsv#acquiredBy">acquired by</a>
+   </li>
+   <li>
+      <a href="#contains" title="https://w3id.org/hsv#contains">contains</a>
+   </li>
+   <li>
+      <a href="#hasAuthor" title="https://w3id.org/hsv#hasAuthor">has author</a>
+   </li>
+   <li>
+      <a href="#hasDocument" title="https://w3id.org/hsv#hasDocument">has document</a>
+   </li>
+   <li>
+      <a href="#hasInspector" title="https://w3id.org/hsv#hasInspector">has inspector</a>
+   </li>
+   <li>
+      <a href="#hasPostProcesser" title="https://w3id.org/hsv#hasPostProcesser">has post-processer</a>
+   </li>
+   <li>
+      <a href="#hasSeismicZone" title="https://w3id.org/hsv#hasSeismicZone">has seismic zone</a>
+   </li>
+   <li>
+      <a href="#hasTraditionalConstructionTechnique"
+         title="https://w3id.org/hsv#hasTraditionalConstructionTechnique">has traditional construction technique</a>
+   </li>
+   <li>
+      <a href="#isContainedBy" title="https://w3id.org/hsv#isContainedBy">is contained by</a>
+   </li>
+   <li>
+      <a href="#isDocumentOf" title="https://w3id.org/hsv#isDocumentOf">is document of</a>
+   </li>
+   <li>
+      <a href="#postProcessedBy" title="https://w3id.org/hsv#postProcessedBy">post-processed by</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Historic Survey Ontology (HSV): Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">The Historic Survey Ontology (HSV) organises the knowledge involved in historic survey activities by explicitly modelling both the information sources and actors directly or indirectly involved in the survey.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Historic Survey Ontology (HSV) classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Historic Survey Ontology (HSV).
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Aggregate" title="https://w3id.org/hsv#Aggregate">Aggregate</a></li>
+  <li><a href="#Author" title="https://w3id.org/hsv#Author">Author</a></li>
+  <li><a href="#BuildingInformationModel" title="https://w3id.org/hsv#BuildingInformationModel">Building Information Model</a></li>
+  <li><a href="#Document" title="https://w3id.org/hsv#Document">Document</a></li>
+  <li><a href="#Drawing" title="https://w3id.org/hsv#Drawing">Drawing</a></li>
+  <li><a href="#Facade" title="https://w3id.org/hsv#Facade">Facade</a></li>
+  <li><a href="#HistoricCentre" title="https://w3id.org/hsv#HistoricCentre">Historic Centre</a></li>
+  <li><a href="#Inspector" title="https://w3id.org/hsv#Inspector">Inspector</a></li>
+  <li><a href="#Photo" title="https://w3id.org/hsv#Photo">Photo</a></li>
+  <li><a href="#PointCloud" title="https://w3id.org/hsv#PointCloud">Point Cloud</a></li>
+  <li><a href="#PostProcesser" title="https://w3id.org/hsv#PostProcesser">Post-Processer</a></li>
+  <li><a href="#Publication" title="https://w3id.org/hsv#Publication">Publication</a></li>
+  <li><a href="#Region" title="https://w3id.org/hsv#Region">Region</a></li>
+  <li><a href="#SeismicZone" title="https://w3id.org/hsv#SeismicZone">Seismic Zone</a></li>
+  <li><a href="#StructuralUnit" title="https://w3id.org/hsv#StructuralUnit">Structural Unit</a></li>
+  <li><a href="#TraditionalConstructionTechnique" title="https://w3id.org/hsv#TraditionalConstructionTechnique">Traditional Construction Technique</a></li>
+ </ul>
+ <div class="entity" id="Aggregate">
+  <h3>Aggregate<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#Aggregate</p>
+  <div class="comment">
+   <span class="markdown">A building aggregate typical of historic urban fabrics, composed of one or more structural units.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#contains" title="https://w3id.org/hsv#contains">contains</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDocument" title="https://w3id.org/hsv#hasDocument">has document</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#contains" title="https://w3id.org/hsv#contains">contains</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Author">
+  <h3>Author<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#Author</p>
+  <div class="comment">
+   <span class="markdown">A person who authored a document or publication related to the survey.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/Person" target="_blank" title="http://xmlns.com/foaf/0.1/Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasAuthor" title="https://w3id.org/hsv#hasAuthor">has author</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BuildingInformationModel">
+  <h3>Building Information Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#BuildingInformationModel</p>
+  <div class="comment">
+   <span class="markdown">A digital model representing the physical and functional characteristics of a heritage asset (BIM).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Document">
+  <h3>Document<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#Document</p>
+  <div class="comment">
+   <span class="markdown">A central class representing any survey output or information source associated with a heritage asset or its components.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BuildingInformationModel" title="https://w3id.org/hsv#BuildingInformationModel">Building Information Model</a> <sup class="type-c" title="class">c</sup>, <a href="#Drawing" title="https://w3id.org/hsv#Drawing">Drawing</a> <sup class="type-c" title="class">c</sup>, <a href="#Photo" title="https://w3id.org/hsv#Photo">Photo</a> <sup class="type-c" title="class">c</sup>, <a href="#PointCloud" title="https://w3id.org/hsv#PointCloud">Point Cloud</a> <sup class="type-c" title="class">c</sup>, <a href="#Publication" title="https://w3id.org/hsv#Publication">Publication</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#acquiredBy" title="https://w3id.org/hsv#acquiredBy">acquired by</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAuthor" title="https://w3id.org/hsv#hasAuthor">has author</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInspector" title="https://w3id.org/hsv#hasInspector">has inspector</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPostProcesser" title="https://w3id.org/hsv#hasPostProcesser">has post-processer</a> <sup class="type-op" title="object property">op</sup>, <a href="#postProcessedBy" title="https://w3id.org/hsv#postProcessedBy">post-processed by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDocument" title="https://w3id.org/hsv#hasDocument">has document</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Drawing">
+  <h3>Drawing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#Drawing</p>
+  <div class="comment">
+   <span class="markdown">A graphical representation such as a plan, section, or elevation produced during a survey.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Facade">
+  <h3>Facade<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#Facade</p>
+  <div class="comment">
+   <span class="markdown">The exterior face of a structural unit or building, treated as a distinct survey entity.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasDocument" title="https://w3id.org/hsv#hasDocument">has document</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HistoricCentre">
+  <h3>Historic Centre<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#HistoricCentre</p>
+  <div class="comment">
+   <span class="markdown">A historic urban centre, typically nested within a region, that may contain one or more building aggregates.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#contains" title="https://w3id.org/hsv#contains">contains</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDocument" title="https://w3id.org/hsv#hasDocument">has document</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSeismicZone" title="https://w3id.org/hsv#hasSeismicZone">has seismic zone</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTraditionalConstructionTechnique" title="https://w3id.org/hsv#hasTraditionalConstructionTechnique">has traditional construction technique</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#contains" title="https://w3id.org/hsv#contains">contains</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Inspector">
+  <h3>Inspector<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#Inspector</p>
+  <div class="comment">
+   <span class="markdown">A person responsible for acquiring survey data in the field.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/Person" target="_blank" title="http://xmlns.com/foaf/0.1/Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#acquiredBy" title="https://w3id.org/hsv#acquiredBy">acquired by</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInspector" title="https://w3id.org/hsv#hasInspector">has inspector</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Photo">
+  <h3>Photo<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#Photo</p>
+  <div class="comment">
+   <span class="markdown">A photographic record of a heritage asset or its components acquired during survey activities.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PointCloud">
+  <h3>Point Cloud<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#PointCloud</p>
+  <div class="comment">
+   <span class="markdown">A set of data points in 3D space acquired through laser scanning or photogrammetry.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PostProcesser">
+  <h3>Post-Processer<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#PostProcesser</p>
+  <div class="comment">
+   <span class="markdown">A person responsible for the post-processing of raw survey data into usable outputs.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/Person" target="_blank" title="http://xmlns.com/foaf/0.1/Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasPostProcesser" title="https://w3id.org/hsv#hasPostProcesser">has post-processer</a> <sup class="type-op" title="object property">op</sup>, <a href="#postProcessedBy" title="https://w3id.org/hsv#postProcessedBy">post-processed by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Publication">
+  <h3>Publication<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#Publication</p>
+  <div class="comment">
+   <span class="markdown">A scholarly or technical text documenting survey findings, research, or heritage knowledge.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Region">
+  <h3>Region<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#Region</p>
+  <div class="comment">
+   <span class="markdown">A geographic or administrative region that may contain one or more historic centres.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#contains" title="https://w3id.org/hsv#contains">contains</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDocument" title="https://w3id.org/hsv#hasDocument">has document</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSeismicZone" title="https://w3id.org/hsv#hasSeismicZone">has seismic zone</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTraditionalConstructionTechnique" title="https://w3id.org/hsv#hasTraditionalConstructionTechnique">has traditional construction technique</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SeismicZone">
+  <h3>Seismic Zone<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#SeismicZone</p>
+  <div class="comment">
+   <span class="markdown">A zone characterised by a specific seismic hazard level, associated with a region or historic centre.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSeismicZone" title="https://w3id.org/hsv#hasSeismicZone">has seismic zone</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StructuralUnit">
+  <h3>Structural Unit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#StructuralUnit</p>
+  <div class="comment">
+   <span class="markdown">A building-scale structural entity representing an individual unit within an aggregate.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasDocument" title="https://w3id.org/hsv#hasDocument">has document</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#contains" title="https://w3id.org/hsv#contains">contains</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TraditionalConstructionTechnique">
+  <h3>Traditional Construction Technique<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#TraditionalConstructionTechnique</p>
+  <div class="comment">
+   <span class="markdown">A construction technique or masonry system historically used in a region or historic centre.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTraditionalConstructionTechnique" title="https://w3id.org/hsv#hasTraditionalConstructionTechnique">has traditional construction technique</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#acquiredBy" title="https://w3id.org/hsv#acquiredBy">acquired by</a></li>
+  <li><a href="#contains" title="https://w3id.org/hsv#contains">contains</a></li>
+  <li><a href="#hasAuthor" title="https://w3id.org/hsv#hasAuthor">has author</a></li>
+  <li><a href="#hasDocument" title="https://w3id.org/hsv#hasDocument">has document</a></li>
+  <li><a href="#hasInspector" title="https://w3id.org/hsv#hasInspector">has inspector</a></li>
+  <li><a href="#hasPostProcesser" title="https://w3id.org/hsv#hasPostProcesser">has post-processer</a></li>
+  <li><a href="#hasSeismicZone" title="https://w3id.org/hsv#hasSeismicZone">has seismic zone</a></li>
+  <li><a href="#hasTraditionalConstructionTechnique" title="https://w3id.org/hsv#hasTraditionalConstructionTechnique">has traditional construction technique</a></li>
+  <li><a href="#isContainedBy" title="https://w3id.org/hsv#isContainedBy">is contained by</a></li>
+  <li><a href="#isDocumentOf" title="https://w3id.org/hsv#isDocumentOf">is document of</a></li>
+  <li><a href="#postProcessedBy" title="https://w3id.org/hsv#postProcessedBy">post-processed by</a></li>
+ </ul>
+ <div class="entity" id="acquiredBy">
+  <h3>acquired by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#acquiredBy</p>
+  <div class="comment">
+   <span class="markdown">Links a survey resource to the inspector who acquired it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasInspector" title="https://w3id.org/hsv#hasInspector">has inspector</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Inspector" title="https://w3id.org/hsv#Inspector">Inspector</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="contains">
+  <h3>contains<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#contains</p>
+  <div class="comment">
+   <span class="markdown">A generic spatial containment property linking a larger spatial entity to a smaller one nested within it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Aggregate" title="https://w3id.org/hsv#Aggregate">Aggregate</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#HistoricCentre" title="https://w3id.org/hsv#HistoricCentre">Historic Centre</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Region" title="https://w3id.org/hsv#Region">Region</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Aggregate" title="https://w3id.org/hsv#Aggregate">Aggregate</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#HistoricCentre" title="https://w3id.org/hsv#HistoricCentre">Historic Centre</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StructuralUnit" title="https://w3id.org/hsv#StructuralUnit">Structural Unit</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isContainedBy" title="https://w3id.org/hsv#isContainedBy">is contained by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAuthor">
+  <h3>has author<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#hasAuthor</p>
+  <div class="comment">
+   <span class="markdown">Links a document or publication to its author.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Author" title="https://w3id.org/hsv#Author">Author</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDocument">
+  <h3>has document<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#hasDocument</p>
+  <div class="comment">
+   <span class="markdown">Links a spatial, structural, or material entity to a document that provides evidence for its characterisation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Aggregate" title="https://w3id.org/hsv#Aggregate">Aggregate</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Facade" title="https://w3id.org/hsv#Facade">Facade</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#HistoricCentre" title="https://w3id.org/hsv#HistoricCentre">Historic Centre</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Region" title="https://w3id.org/hsv#Region">Region</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StructuralUnit" title="https://w3id.org/hsv#StructuralUnit">Structural Unit</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isDocumentOf" title="https://w3id.org/hsv#isDocumentOf">is document of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInspector">
+  <h3>has inspector<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#hasInspector</p>
+  <div class="comment">
+   <span class="markdown">Associates a survey resource with the inspector responsible for its field acquisition.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#acquiredBy" title="https://w3id.org/hsv#acquiredBy">acquired by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Inspector" title="https://w3id.org/hsv#Inspector">Inspector</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPostProcesser">
+  <h3>has post-processer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#hasPostProcesser</p>
+  <div class="comment">
+   <span class="markdown">Associates a survey resource with the post-processer responsible for its elaboration.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#postProcessedBy" title="https://w3id.org/hsv#postProcessedBy">post-processed by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PostProcesser" title="https://w3id.org/hsv#PostProcesser">Post-Processer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSeismicZone">
+  <h3>has seismic zone<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#hasSeismicZone</p>
+  <div class="comment">
+   <span class="markdown">Associates a region or historic centre with its seismic zone classification.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HistoricCentre" title="https://w3id.org/hsv#HistoricCentre">Historic Centre</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Region" title="https://w3id.org/hsv#Region">Region</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SeismicZone" title="https://w3id.org/hsv#SeismicZone">Seismic Zone</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTraditionalConstructionTechnique">
+  <h3>has traditional construction technique<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#hasTraditionalConstructionTechnique</p>
+  <div class="comment">
+   <span class="markdown">Associates a region or historic centre with a traditional construction technique typical of that context.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HistoricCentre" title="https://w3id.org/hsv#HistoricCentre">Historic Centre</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Region" title="https://w3id.org/hsv#Region">Region</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TraditionalConstructionTechnique" title="https://w3id.org/hsv#TraditionalConstructionTechnique">Traditional Construction Technique</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isContainedBy">
+  <h3>is contained by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#isContainedBy</p>
+  <div class="comment">
+   <span class="markdown">Inverse of hsv:contains.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#contains" title="https://w3id.org/hsv#contains">contains</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isDocumentOf">
+  <h3>is document of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#isDocumentOf</p>
+  <div class="comment">
+   <span class="markdown">Inverse of hsv:hasDocument.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasDocument" title="https://w3id.org/hsv#hasDocument">has document</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="postProcessedBy">
+  <h3>post-processed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/hsv#postProcessedBy</p>
+  <div class="comment">
+   <span class="markdown">Links a survey resource to the person who post-processed it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasPostProcesser" title="https://w3id.org/hsv#hasPostProcesser">has post-processer</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Document" title="https://w3id.org/hsv#Document">Document</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PostProcesser" title="https://w3id.org/hsv#PostProcesser">Post-Processer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">Cursi, S., Martinelli, L., Gigliarelli, E., Calcerano, F., Leonardi, M. L., Azenha, M., Oliveira, D. V., & Calvano, M. (2025). Leveraging linked data for enhanced knowledge representation in historical centers safety assessment: insights from Castelnuovo di Porto, Rome. Archeologia e Calcolatori, Supplemento 13, 217–231. https://doi.org/10.19282/acs.13.2025.16
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

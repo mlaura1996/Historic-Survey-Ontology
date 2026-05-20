@@ -1,0 +1,307 @@
+<https://w3id.org/hsv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Maria Laura Leonardi" .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/creator> _:genid2 .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Stefano Cursi" .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/creator> _:genid3 .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Letizia Martinelli" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/creator> _:genid4 .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Elena Gigliarelli" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/creator> _:genid5 .
+_:genid5 <http://xmlns.com/foaf/0.1/name> "Filippo Calcerano" .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/creator> _:genid6 .
+_:genid6 <http://xmlns.com/foaf/0.1/name> "Miguel Azenha" .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/creator> _:genid7 .
+_:genid7 <http://xmlns.com/foaf/0.1/name> "Daniel V. Oliveira" .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/creator> _:genid8 .
+_:genid8 <http://xmlns.com/foaf/0.1/name> "Michele Calvano" .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/description> "The Historic Survey Ontology (HSV) organises the knowledge involved in historic survey activities by explicitly modelling both the information sources and actors directly or indirectly involved in the survey."@en .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/isReferencedBy> <https://doi.org/10.19282/acs.13.2025.16> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/hsv> <http://purl.org/dc/terms/title> "Historic Survey Ontology (HSV)"@en .
+<https://w3id.org/hsv> <http://purl.org/vocab/vann/preferredNamespacePrefix> "hsv" .
+<https://w3id.org/hsv> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/hsv#" .
+<https://w3id.org/hsv> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/isReferencedBy
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/hsv#acquiredBy
+<https://w3id.org/hsv#acquiredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#acquiredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#acquiredBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/hsv#Inspector> .
+<https://w3id.org/hsv#acquiredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a survey resource to the inspector who acquired it."@en .
+<https://w3id.org/hsv#acquiredBy> <http://www.w3.org/2000/01/rdf-schema#label> "acquired by"@en .
+# 
+# https://w3id.org/hsv#contains
+<https://w3id.org/hsv#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#contains> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#Region> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#HistoricCentre> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#Aggregate> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#contains> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#StructuralUnit> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#HistoricCentre> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#Aggregate> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic spatial containment property linking a larger spatial entity to a smaller one nested within it."@en .
+<https://w3id.org/hsv#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
+# 
+# https://w3id.org/hsv#hasAuthor
+<https://w3id.org/hsv#hasAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/hsv#Author> .
+<https://w3id.org/hsv#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a document or publication to its author."@en .
+<https://w3id.org/hsv#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "has author"@en .
+# 
+# https://w3id.org/hsv#hasDocument
+<https://w3id.org/hsv#hasDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#hasDocument> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#StructuralUnit> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#Region> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#HistoricCentre> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#Facade> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#Aggregate> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#hasDocument> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#hasDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a spatial, structural, or material entity to a document that provides evidence for its characterisation."@en .
+<https://w3id.org/hsv#hasDocument> <http://www.w3.org/2000/01/rdf-schema#label> "has document"@en .
+# 
+# https://w3id.org/hsv#hasInspector
+<https://w3id.org/hsv#hasInspector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#hasInspector> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/hsv#acquiredBy> .
+<https://w3id.org/hsv#hasInspector> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#hasInspector> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/hsv#Inspector> .
+<https://w3id.org/hsv#hasInspector> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a survey resource with the inspector responsible for its field acquisition."@en .
+<https://w3id.org/hsv#hasInspector> <http://www.w3.org/2000/01/rdf-schema#label> "has inspector"@en .
+# 
+# https://w3id.org/hsv#hasPostProcesser
+<https://w3id.org/hsv#hasPostProcesser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#hasPostProcesser> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/hsv#postProcessedBy> .
+<https://w3id.org/hsv#hasPostProcesser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#hasPostProcesser> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/hsv#PostProcesser> .
+<https://w3id.org/hsv#hasPostProcesser> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a survey resource with the post-processer responsible for its elaboration."@en .
+<https://w3id.org/hsv#hasPostProcesser> <http://www.w3.org/2000/01/rdf-schema#label> "has post-processer"@en .
+# 
+# https://w3id.org/hsv#hasSeismicZone
+<https://w3id.org/hsv#hasSeismicZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#hasSeismicZone> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#unionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#Region> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#HistoricCentre> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#hasSeismicZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/hsv#SeismicZone> .
+<https://w3id.org/hsv#hasSeismicZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a region or historic centre with its seismic zone classification."@en .
+<https://w3id.org/hsv#hasSeismicZone> <http://www.w3.org/2000/01/rdf-schema#label> "has seismic zone"@en .
+# 
+# https://w3id.org/hsv#hasTraditionalConstructionTechnique
+<https://w3id.org/hsv#hasTraditionalConstructionTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#hasTraditionalConstructionTechnique> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#unionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#Region> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hsv#HistoricCentre> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#hasTraditionalConstructionTechnique> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/hsv#TraditionalConstructionTechnique> .
+<https://w3id.org/hsv#hasTraditionalConstructionTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a region or historic centre with a traditional construction technique typical of that context."@en .
+<https://w3id.org/hsv#hasTraditionalConstructionTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "has traditional construction technique"@en .
+# 
+# https://w3id.org/hsv#isContainedBy
+<https://w3id.org/hsv#isContainedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#isContainedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/hsv#contains> .
+<https://w3id.org/hsv#isContainedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of hsv:contains."@en .
+<https://w3id.org/hsv#isContainedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is contained by"@en .
+# 
+# https://w3id.org/hsv#isDocumentOf
+<https://w3id.org/hsv#isDocumentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#isDocumentOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/hsv#hasDocument> .
+<https://w3id.org/hsv#isDocumentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of hsv:hasDocument."@en .
+<https://w3id.org/hsv#isDocumentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is document of"@en .
+# 
+# https://w3id.org/hsv#postProcessedBy
+<https://w3id.org/hsv#postProcessedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hsv#postProcessedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#postProcessedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/hsv#PostProcesser> .
+<https://w3id.org/hsv#postProcessedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a survey resource to the person who post-processed it."@en .
+<https://w3id.org/hsv#postProcessedBy> <http://www.w3.org/2000/01/rdf-schema#label> "post-processed by"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://xmlns.com/foaf/0.1/Person
+# 
+# https://w3id.org/hsv#Aggregate
+<https://w3id.org/hsv#Aggregate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#Aggregate> <http://www.w3.org/2000/01/rdf-schema#comment> "A building aggregate typical of historic urban fabrics, composed of one or more structural units."@en .
+<https://w3id.org/hsv#Aggregate> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregate"@en .
+# 
+# https://w3id.org/hsv#Author
+<https://w3id.org/hsv#Author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#Author> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/hsv#Author> <http://www.w3.org/2000/01/rdf-schema#comment> "A person who authored a document or publication related to the survey."@en .
+<https://w3id.org/hsv#Author> <http://www.w3.org/2000/01/rdf-schema#label> "Author"@en .
+# 
+# https://w3id.org/hsv#BuildingInformationModel
+<https://w3id.org/hsv#BuildingInformationModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#BuildingInformationModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#BuildingInformationModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital model representing the physical and functional characteristics of a heritage asset (BIM)."@en .
+<https://w3id.org/hsv#BuildingInformationModel> <http://www.w3.org/2000/01/rdf-schema#label> "Building Information Model"@en .
+# 
+# https://w3id.org/hsv#Document
+<https://w3id.org/hsv#Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#Document> <http://www.w3.org/2000/01/rdf-schema#comment> "A central class representing any survey output or information source associated with a heritage asset or its components."@en .
+<https://w3id.org/hsv#Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document"@en .
+# 
+# https://w3id.org/hsv#Drawing
+<https://w3id.org/hsv#Drawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#Drawing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#Drawing> <http://www.w3.org/2000/01/rdf-schema#comment> "A graphical representation such as a plan, section, or elevation produced during a survey."@en .
+<https://w3id.org/hsv#Drawing> <http://www.w3.org/2000/01/rdf-schema#label> "Drawing"@en .
+# 
+# https://w3id.org/hsv#Facade
+<https://w3id.org/hsv#Facade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#Facade> <http://www.w3.org/2000/01/rdf-schema#comment> "The exterior face of a structural unit or building, treated as a distinct survey entity."@en .
+<https://w3id.org/hsv#Facade> <http://www.w3.org/2000/01/rdf-schema#label> "Facade"@en .
+# 
+# https://w3id.org/hsv#HistoricCentre
+<https://w3id.org/hsv#HistoricCentre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#HistoricCentre> <http://www.w3.org/2000/01/rdf-schema#comment> "A historic urban centre, typically nested within a region, that may contain one or more building aggregates."@en .
+<https://w3id.org/hsv#HistoricCentre> <http://www.w3.org/2000/01/rdf-schema#label> "Historic Centre"@en .
+# 
+# https://w3id.org/hsv#Inspector
+<https://w3id.org/hsv#Inspector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#Inspector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/hsv#Inspector> <http://www.w3.org/2000/01/rdf-schema#comment> "A person responsible for acquiring survey data in the field."@en .
+<https://w3id.org/hsv#Inspector> <http://www.w3.org/2000/01/rdf-schema#label> "Inspector"@en .
+# 
+# https://w3id.org/hsv#Photo
+<https://w3id.org/hsv#Photo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#Photo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#Photo> <http://www.w3.org/2000/01/rdf-schema#comment> "A photographic record of a heritage asset or its components acquired during survey activities."@en .
+<https://w3id.org/hsv#Photo> <http://www.w3.org/2000/01/rdf-schema#label> "Photo"@en .
+# 
+# https://w3id.org/hsv#PointCloud
+<https://w3id.org/hsv#PointCloud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#PointCloud> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#PointCloud> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of data points in 3D space acquired through laser scanning or photogrammetry."@en .
+<https://w3id.org/hsv#PointCloud> <http://www.w3.org/2000/01/rdf-schema#label> "Point Cloud"@en .
+# 
+# https://w3id.org/hsv#PostProcesser
+<https://w3id.org/hsv#PostProcesser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#PostProcesser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/hsv#PostProcesser> <http://www.w3.org/2000/01/rdf-schema#comment> "A person responsible for the post-processing of raw survey data into usable outputs."@en .
+<https://w3id.org/hsv#PostProcesser> <http://www.w3.org/2000/01/rdf-schema#label> "Post-Processer"@en .
+# 
+# https://w3id.org/hsv#Publication
+<https://w3id.org/hsv#Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/hsv#Document> .
+<https://w3id.org/hsv#Publication> <http://www.w3.org/2000/01/rdf-schema#comment> "A scholarly or technical text documenting survey findings, research, or heritage knowledge."@en .
+<https://w3id.org/hsv#Publication> <http://www.w3.org/2000/01/rdf-schema#label> "Publication"@en .
+# 
+# https://w3id.org/hsv#Region
+<https://w3id.org/hsv#Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#Region> <http://www.w3.org/2000/01/rdf-schema#comment> "A geographic or administrative region that may contain one or more historic centres."@en .
+<https://w3id.org/hsv#Region> <http://www.w3.org/2000/01/rdf-schema#label> "Region"@en .
+# 
+# https://w3id.org/hsv#SeismicZone
+<https://w3id.org/hsv#SeismicZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#SeismicZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A zone characterised by a specific seismic hazard level, associated with a region or historic centre."@en .
+<https://w3id.org/hsv#SeismicZone> <http://www.w3.org/2000/01/rdf-schema#label> "Seismic Zone"@en .
+# 
+# https://w3id.org/hsv#StructuralUnit
+<https://w3id.org/hsv#StructuralUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#StructuralUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A building-scale structural entity representing an individual unit within an aggregate."@en .
+<https://w3id.org/hsv#StructuralUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Unit"@en .
+# 
+# https://w3id.org/hsv#TraditionalConstructionTechnique
+<https://w3id.org/hsv#TraditionalConstructionTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hsv#TraditionalConstructionTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "A construction technique or masonry system historically used in a region or historic centre."@en .
+<https://w3id.org/hsv#TraditionalConstructionTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "Traditional Construction Technique"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
